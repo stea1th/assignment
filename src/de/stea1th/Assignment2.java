@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Assignment2 extends ConsoleProgram {
 
-    private static final List<Integer> ASCII_VOCALS = Arrays.asList(65, 97, 69, 101, 73, 105, 79, 111, 85, 117);
+    private static final List<Character> VOCALS = Arrays.asList('A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u');
 
     @Override
     public void run() {
@@ -19,7 +19,7 @@ public class Assignment2 extends ConsoleProgram {
     private String removeVocals(String text){
         String result = "";
         for (int i = 0; i <text.length() ; i++) {
-            if(!ASCII_VOCALS.contains(text.codePointAt(i))){
+            if(!VOCALS.contains(text.charAt(i))){
                 result += text.charAt(i);
             }
         }
