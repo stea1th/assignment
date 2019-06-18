@@ -8,6 +8,7 @@ public class Main {
 //        palindrom.start();
 //        new Parentheses().start();
 //        new BuildIndex().start();
-        new Assignment2().start();
+//        new Assignment2().start();
+        new Palindrom2().start();
     }
 }
