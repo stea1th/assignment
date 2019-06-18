@@ -4,8 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
 //        new Assignment1().start();
-//        new Palindrom().start();
+//        Palindrom palindrom = new Palindrom();
+//        palindrom.start();
 //        new Parentheses().start();
-        new BuildIndex().start();
+//        new BuildIndex().start();
+        new Assignment2().start();
     }
 }

@@ -86,7 +86,7 @@ public class BuildIndex extends ConsoleProgram {
         Map<String, Word> resultWords = new HashMap<>();
         stringsAndPages.forEach((k, v) -> {
             for (String s : v) {
-                String[] words = s.split("[]\"',;:.!?()〈\\-—•’_“”‘\\[/ \t\n\r\f\\W]");
+                String[] words = s.split("[]\"',;:.!?()〈\\-—•’_“”‘\\[/ \\W]");
                 Arrays.stream(words)
                         .map(String::toLowerCase)
                         .forEach(i -> {
