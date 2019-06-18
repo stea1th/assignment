@@ -9,7 +9,9 @@ public class Assignment2 extends ConsoleProgram {
     @Override
     public void run() {
         while(true){
-            println(removeVocals(readLine("Enter text: ")));
+            String text = readLine("Enter text: ");
+            text = removeVocals(text);
+            println(text);
         }
     }
 
