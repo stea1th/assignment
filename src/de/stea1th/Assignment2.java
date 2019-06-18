@@ -2,12 +2,9 @@ package de.stea1th;
 
 import acm.program.ConsoleProgram;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class Assignment2 extends ConsoleProgram {
 
-    private static final List<Character> VOCALS = Arrays.asList('A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u');
+    private static final Character[] VOCALS = {'A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u'};
 
     @Override
     public void run() {
@@ -19,10 +16,19 @@ public class Assignment2 extends ConsoleProgram {
     private String removeVocals(String text){
         String result = "";
         for (int i = 0; i <text.length() ; i++) {
-            if(!VOCALS.contains(text.charAt(i))){
+            if(!isVocal(text.charAt(i))){
                 result += text.charAt(i);
             }
         }
         return result;
+    }
+
+    private boolean isVocal(Character character){
+        for(Character c : VOCALS ){
+            if(c == character){
+                return true;
+            }
+        }
+        return false;
     }
 }
