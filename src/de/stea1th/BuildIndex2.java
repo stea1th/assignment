@@ -12,7 +12,7 @@ public class BuildIndex2 extends ConsoleProgram {
 
     @Override
     public void run() {
-        while (true) {
+//        while (true) {
             List<String> bookStrings = readAllLinesFromBook();
             println("===================================================");
             filterAndCountWords(Objects.requireNonNull(bookStrings))
@@ -24,13 +24,13 @@ public class BuildIndex2 extends ConsoleProgram {
                                 .collect(Collectors.joining(", "));
                         println(i.getName() + " => repeats: " + i.getCount() + " pages: " + pages);
                     });
-        }
+//        }
     }
 
     private List<String> readAllLinesFromBook() {
         try {
-            return Files.readAllLines(Paths.get(readLine("Enter a path to book: ")));
-//            return Files.readAllLines(Paths.get("d:\\test\\text.txt"));
+//            return Files.readAllLines(Paths.get(readLine("Enter a path to book: ")));
+            return Files.readAllLines(Paths.get("D:\\JavaProjects\\Libraries\\TomSawyer.txt"));
         } catch (IOException e) {
             println("Cant read this book");
         } catch (Exception e) {
@@ -43,9 +43,11 @@ public class BuildIndex2 extends ConsoleProgram {
         Map<String, Word> resultWords = new HashMap<>();
         int lineNumber = 1;
         for (String s : list) {
-            String[] words = s.split("[]\"',;:.!?()〈\\-—•’_“”‘\\[/ \\W]");
-            for(String w : words){
-                w = w.toLowerCase();
+//            String[] words = s.split("[]\"',;:.!?()〈\\-—•’_“”‘\\[/ \\W]");
+            StringTokenizer st = new StringTokenizer(s, "[]\"',;:.!?()〈\\-—•’_“”‘\\[/ \\W]");
+//            for(String w : words){
+            while(st.hasMoreTokens()){
+               String  w = st.nextToken().toLowerCase();
                 Word word = resultWords.get(w);
                 if (word != null) {
                     word.addLineNumberAndCount(lineNumber);
