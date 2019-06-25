@@ -10,7 +10,8 @@ public class Main {
 //        new BuildIndex().start();
 //        new Assignment2().start();
 //        new Palindrom2().start();
-        new Assignment4().start();
+//        new Assignment4().start();
+        new BuildIndex2().start();
 
     }
 }

@@ -7,12 +7,12 @@ public class Word {
 
     private String name;
     private Integer count;
-    private Set<Integer> pageNumbers;
+    private Set<Integer> lineNumbers;
 
-    public Word(String name, Integer count, Set<Integer> pageNumbers) {
+    public Word(String name, Integer count, Set<Integer> lineNumbers) {
         this.name = name;
         this.count = count;
-        this.pageNumbers = pageNumbers;
+        this.lineNumbers = lineNumbers;
     }
 
     public String getName() {
@@ -31,16 +31,16 @@ public class Word {
         this.count = count;
     }
 
-    public Set<Integer> getPageNumbers() {
-        return pageNumbers;
+    public Set<Integer> getLineNumbers() {
+        return lineNumbers;
     }
 
-    public void setPageNumbers(TreeSet<Integer> pageNumbers) {
-        this.pageNumbers = pageNumbers;
+    public void setLineNumbers(TreeSet<Integer> pageNumbers) {
+        this.lineNumbers = pageNumbers;
     }
 
-    public void addPageNumberAndCount(Integer pageNumber){
+    public void addLineNumberAndCount(Integer lineNumber){
         count++;
-        pageNumbers.add(pageNumber);
+        lineNumbers.add(lineNumber);
     }
 }
