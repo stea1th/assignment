@@ -9,6 +9,8 @@ public class Main {
 //        new Parentheses().start();
 //        new BuildIndex().start();
 //        new Assignment2().start();
-        new Palindrom2().start();
+//        new Palindrom2().start();
+        new Assignment4().start();
+
     }
 }

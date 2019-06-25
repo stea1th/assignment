@@ -2,8 +2,7 @@ package de.stea1th;
 
 import acm.program.ConsoleProgram;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.Stack;
 
 public class Palindrom2 extends ConsoleProgram {
 
@@ -16,14 +15,14 @@ public class Palindrom2 extends ConsoleProgram {
         }
     }
 
-    private boolean isPalindrom(String text){
+    private boolean isPalindrom(String text) {
         char[] chars = text.toCharArray();
-        Deque<Character> stack = new ArrayDeque<>();
-        for(char c : chars){
+        Stack<Character> stack = new Stack<>();
+        for (char c : chars) {
             stack.push(c);
         }
-        for(char c : chars){
-            if(c != stack.pop()){
+        for (char c : chars) {
+            if (c != stack.pop()) {
                 return false;
             }
         }
